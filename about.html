@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="website icon" href="../public/favicon.ico" type="image/x-icon" />
-    <title>Skills - Rizky</title>
+    <link rel="website icon" href="public/favicon.ico" type="image/x-icon" />
+    <title>About - Rizky</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <!-- TailwindCSS -->
-    <link href="css/minify/output.css" rel="stylesheet" />
+    <link href="src/css/minify/output.css" rel="stylesheet" />
   </head>
   <body class="font-rubik">
     <!-- Animation Preloaders -->
@@ -99,78 +99,84 @@
     </header>
     <!-- Header End -->
 
-    <!-- Skills -->
-    <section class="bg-white2 pb-16 pt-32 dark:bg-dark">
+    <!-- About -->
+    <section class="bg-white2 pb-24 pt-32 dark:bg-dark">
       <div class="container">
-        <div class="flex flex-col items-center justify-center gap-3">
-          <h1 class="text-4xl font-bold text-dark dark:text-white3">Skills</h1>
-        </div>
-        <div class="flex flex-wrap justify-center p-5">
-          <!-- Html -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="HTML"
-          >
-            <img class="w-24" src="../public/icons/html.svg" alt="HTML" />
+        <div class="flex flex-col items-center justify-center gap-5 md:flex-row md:items-start md:gap-10">
+          <!-- left -->
+          <div class="h-48 w-48 overflow-hidden rounded-full bg-white dark:bg-dark md:mt-14 md:h-80 md:w-80">
+            <img class="w-full object-cover transition-all duration-500 ease-in-out hover:translate-y-14 hover:scale-150 md:hover:translate-y-24" src="public/foto-rizky.jpg" alt="Foto Rizky" />
           </div>
-          <!-- Css -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="CSS"
-          >
-            <img class="w-24" src="../public/icons/css.svg" alt="CSS" />
-          </div>
-          <!-- Bootstrap -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="Bootstrap"
-          >
-            <img class="w-28" src="../public/icons/bootstrap.svg" alt="Bootstrap" />
-          </div>
-          <!-- C++ -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="C++"
-          >
-            <img class="w-24" src="../public/icons/cpp.svg" alt="C++" />
-          </div>
-          <!-- JavaScript -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="JavaScript"
-          >
-            <img class="w-24 rounded-xl" src="../public/icons/js.svg" alt="javaScript" />
-          </div>
-          <!-- Tailwind CSS -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="Tailwind CSS"
-          >
-            <img class="w-24" src="../public/icons/tailwind.svg" alt="Tailwind CSS" />
-          </div>
-          <!-- Laravel -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="Laravel"
-          >
-            <img class="w-24" src="../public/icons/laravel.svg" alt="Laravel" />
-          </div>
-          <!-- Mysql -->
-          <div
-            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
-            title="Mysql"
-          >
-            <img class="w-28" src="../public/icons/mysql.svg" alt="Mysql" />
+          <!-- Right -->
+          <div class="w-full px-6 md:w-1/2 md:px-0 md:text-left">
+            <h1 class="mb-3 text-center text-4xl font-bold text-dark dark:text-white3">About</h1>
+            <div class="text-dark dark:text-white3">
+              <p class="mb-3 font-medium">
+                Hi everyone, my name is Rizky Rama Dhanu. I am a Junior Front End Developer, Computer and Network Engineering Student, Coding is my passion and hobby since I was 15 years old, and I have loved computers since I was a kid.
+              </p>
+              <p class="mb-6 font-medium">I live in Mertan, Bendosari, Sukoharjo, Indonesia. I was born in Sukoharjo, October 31 2005. I am 17 years old. I am a Computer and Network Engineering student from SMK Veteran 1 Sukoharjo.</p>
+              <h1 class="mb-3 text-4xl font-bold">Education</h1>
+              <ol class="relative ml-2 border-l-4 border-sky">
+                <li class="mb-10 ml-4">
+                  <div class="absolute -left-3 flex h-5 w-5 items-center justify-center rounded-full bg-sky">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="h-4 w-4 text-white2" fill="currentColor">
+                      <path
+                        d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="mb-2 text-lg font-bold">Vocational High School</h2>
+                  <p class="font-medium">SMK Veteran 1</p>
+                  <p class="mb-2 font-medium">Computer and Network Engineering</p>
+                  <p class="text-sm font-medium">2021 - Now</p>
+                </li>
+              </ol>
+              <h1 class="mb-3 text-4xl font-bold">Work Experience</h1>
+              <ol class="relative ml-2 border-l-4 border-sky">
+                <li class="mb-10 ml-4">
+                  <div class="absolute -left-3 flex h-5 w-5 items-center justify-center rounded-full bg-sky">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 text-white2" fill="currentColor">
+                      <path
+                        d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="mb-2 text-lg font-bold">Internship</h2>
+                  <p class="font-medium">PT. Jujura</p>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Learn laravel</li>
+                  </ul>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Learn mysql databases</li>
+                  </ul>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Helping the IT team create employee data web views</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Create a consultancy website using laravel and mysql</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Overcoming dead laptops</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Overcome wifi networks that are not connected</li>
+                  </ul>
+                  <p class="text-sm font-medium">Jan 2023 - Mar 2023</p>
+                </li>
+              </ol>
+              <h1 class="mb-3 text-4xl font-bold">Resume</h1>
+              <p class="font-medium">You can read my resume <a class="text-sky underline" target="_blank" href="https://drive.google.com/file/d/1jvOJBsnzKCzCxo1jeLF_YjJqsDbC8btr/view?usp=share_link">here.</a></p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Skills End -->
+    <!-- About End -->
 
     <!-- Back To Top -->
     <a
       href="#"
-      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20 md:hidden"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20"
       id="to-top"
     >
       <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -180,10 +186,10 @@
     <!-- Back to top End -->
 
     <!-- Footer -->
-    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center text-sm font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
+    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
     <!-- Footer End -->
 
-    <script src="js/script.js
+    <script src="src/js/script.js
     "></script>
   </body>
 </html>
