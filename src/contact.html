@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" href="../public/favicon.ico" type="image/x-icon" />
+    <title>Contact - Rizky</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- TailwindCSS -->
+    <link href="css/minify/output.css" rel="stylesheet" />
+    <!-- Emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('UtP1B8VMygw_YQe-V');
+      })();
+    </script>
+  </head>
+  <body class="font-rubik">
+    <!-- Animation Preloaders -->
+    <div class="fixed z-10 flex h-screen w-full items-center justify-center bg-white2 dark:bg-dark" id="loader">
+      <span class="circle animate-loader"></span>
+      <span class="circle animation-delay-200 animate-loader"></span>
+      <span class="circle animation-delay-400 animate-loader"></span>
+    </div>
+    <!-- Animation Preloaders End -->
+
+    <!-- Header -->
+    <header class="fixed left-0 top-0 z-20 flex w-full items-center border-b bg-white dark:border-dark3 dark:bg-dark2">
+      <div class="container">
+        <div class="relative flex items-center justify-between px-6 py-4 md:px-10 md:py-0">
+          <!-- left -->
+          <div class="flex items-center">
+            <button id="hamburger" name="hamburger" type="button" class="left-4 block md:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left duration-300 ease-in-out"></span>
+            </button>
+            <!-- Navbar -->
+            <nav id="nav-menu" class="absolute left-0 top-full hidden h-screen w-full border-t bg-white py-4 dark:border-dark3 dark:bg-dark md:static md:block md:h-fit md:bg-transparent md:dark:bg-transparent">
+              <ul class="block md:flex">
+                <li class="group">
+                  <a
+                    href="home.html"
+                    class="mx-4 flex border-b pb-2 pt-2 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="about.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="skills.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="projects.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="contact.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Right -->
+          <!-- Dark Mode -->
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <svg class="mr-1 h-4 w-4 text-dark text-opacity-50 dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                />
+              </svg>
+              <input type="checkbox" class="hidden" id="dark-toggle" />
+              <label for="dark-toggle">
+                <div class="flex h-6 w-12 cursor-pointer items-center rounded-full bg-slate-300 p-1 dark:bg-dark4">
+                  <div class="toggle-circle h-5 w-5 rounded-full bg-white transition-all duration-200 ease-in-out hover:scale-75"></div>
+                </div>
+              </label>
+              <svg class="ml-1 h-4 w-4 text-sky dark:text-white dark:text-opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Contact -->
+    <section class="bg-white2 pb-16 pt-28 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-6">
+          <div class="mx-auto max-w-lg p-5">
+            <h1 class="mb-6 text-center text-4xl font-bold text-dark dark:text-white3">Contact</h1>
+            <div class="text-dark dark:text-white3">
+              <p class="mb-3 font-medium">Please don’t hesitate to get in touch with me by following my social media below</p>
+              <ul class="ml-10 list-disc">
+                <li class="font-medium">Instagram - <a href="https://www.instagram.com/danualexis58_" target="_blank" class="font-bold underline">danualexis58</a></li>
+              </ul>
+              <ul class="ml-10 list-disc">
+                <li class="font-medium">Fecebook - <a href="https://www.facebook.com/danualexis58" class="font-bold underline">Danu Alexis</a></li>
+              </ul>
+              <ul class="ml-10 list-disc">
+                <li class="font-medium">Github - <a href="https://github.com/rzkyrmdnu" target="_blank" class="font-bold underline">rzkyrmdnu</a></li>
+              </ul>
+              <ul class="mb-6 ml-10 list-disc">
+                <li class="font-medium">LinkedIn - <a href="https://www.linkedin.com/in/rzkyrmdnu" target="_blank" class="font-bold underline">Rizky Rama Dhanu</a></li>
+              </ul>
+              <h1 class="mb-6 text-center text-4xl font-bold text-dark dark:text-white3">Message</h1>
+            </div>
+            <!-- Alert Notification -->
+            <div class="my-alert relative mb-6 hidden rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700" role="alert">
+              <strong class="font-bold">Thank You!</strong>
+              <span class="block font-medium md:inline">We have received your message.</span>
+              <button class="alert-del absolute bottom-0 right-0 top-0 px-2 py-3">
+                <span>
+                  <svg class="h-6 w-6 fill-current text-green-600 hover:text-opacity-80" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <title>Close</title>
+                    <path
+                      d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- Contact Form -->
+            <form id="contact-form">
+              <!-- Name -->
+              <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Full Name</span>
+              <label for="name">
+                <input type="text" id="name" name="name" placeholder="Your Name" class="mb-6 block w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 focus:border-sky focus:outline-none" required />
+              </label>
+              <!-- Email -->
+              <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Email</span>
+              <label for="email">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  class="peer block w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 invalid:text-pink-700 focus:border-sky focus:outline-none invalid:focus:border-pink-700"
+                />
+                <p class="invisible m-1 text-sm text-pink-700 peer-invalid:visible">Invalid email</p>
+              </label>
+              <!-- Message -->
+              <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Message</span>
+              <label for="message">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  class="mb-6 block h-32 w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 focus:border-sky focus:outline-none"
+                  required
+                ></textarea>
+              </label>
+              <!-- Button send -->
+              <div class="flex w-full">
+                <button type="submit" class="btn-kirim flex items-center rounded bg-sky px-4 py-2 font-semibold text-white transition duration-200 hover:bg-opacity-80">
+                  <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 2L11 13M22 2l-7 20l-4-9l-9-4l20-7z" /></svg
+                  >Send
+                </button>
+                <!-- Button Loading -->
+                <button type="button" class="btn-loading flex hidden items-center rounded bg-sky bg-opacity-80 px-4 py-2 text-white" disabled>
+                  <svg class="mr-3 h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  <span class="font-semibold"> Loading... </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- Back To Top -->
+    <a
+      href="#"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20"
+      id="to-top"
+    >
+      <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"></path>
+      </svg>
+    </a>
+    <!-- Back to top End -->
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center text-sm font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
+    <!-- Footer End -->
+    <script src="js/script.js
+    "></script>
+  </body>
+</html>

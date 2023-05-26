@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" href="../public/favicon.ico" type="image/x-icon" />
+    <title>About - Rizky</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- TailwindCSS -->
+    <link href="css/minify/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-rubik">
+    <!-- Animation Preloaders -->
+    <div class="fixed z-10 flex h-screen w-full items-center justify-center bg-white2 dark:bg-dark" id="loader">
+      <span class="circle animate-loader"></span>
+      <span class="circle animation-delay-200 animate-loader"></span>
+      <span class="circle animation-delay-400 animate-loader"></span>
+    </div>
+    <!-- Animation Preloaders End -->
+
+    <!-- Header -->
+    <header class="fixed left-0 top-0 z-20 flex w-full items-center border-b bg-white dark:border-dark3 dark:bg-dark2">
+      <div class="container">
+        <div class="relative flex items-center justify-between px-6 py-4 md:px-10 md:py-0">
+          <!-- left -->
+          <div class="flex items-center">
+            <button id="hamburger" name="hamburger" type="button" class="left-4 block md:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left duration-300 ease-in-out"></span>
+            </button>
+            <!-- Navbar -->
+            <nav id="nav-menu" class="absolute left-0 top-full hidden h-screen w-full border-t bg-white py-4 dark:border-dark3 dark:bg-dark md:static md:block md:h-fit md:bg-transparent md:dark:bg-transparent">
+              <ul class="block md:flex">
+                <li class="group">
+                  <a
+                    href="home.html"
+                    class="mx-4 flex border-b pb-2 pt-2 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="about.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="skills.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="projects.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="contact.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Right -->
+          <!-- Dark Mode -->
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <svg class="mr-1 h-4 w-4 text-dark text-opacity-50 dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                />
+              </svg>
+              <input type="checkbox" class="hidden" id="dark-toggle" />
+              <label for="dark-toggle">
+                <div class="flex h-6 w-12 cursor-pointer items-center rounded-full bg-slate-300 p-1 dark:bg-dark4">
+                  <div class="toggle-circle h-5 w-5 rounded-full bg-white transition-all duration-200 ease-in-out hover:scale-75"></div>
+                </div>
+              </label>
+              <svg class="ml-1 h-4 w-4 text-sky dark:text-white dark:text-opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- About -->
+    <section class="bg-white2 pb-24 pt-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-col items-center justify-center gap-5 md:flex-row md:items-start md:gap-10">
+          <!-- left -->
+          <div class="h-48 w-48 overflow-hidden rounded-full bg-white dark:bg-dark md:mt-14 md:h-80 md:w-80">
+            <img class="w-full object-cover transition-all duration-500 ease-in-out hover:translate-y-14 hover:scale-150 md:hover:translate-y-24" src="../public/foto-rizky.jpg" alt="Foto Rizky" />
+          </div>
+          <!-- Right -->
+          <div class="w-full px-6 md:w-1/2 md:px-0 md:text-left">
+            <h1 class="mb-3 text-center text-4xl font-bold text-dark dark:text-white3">About</h1>
+            <div class="text-dark dark:text-white3">
+              <p class="mb-3 font-medium">
+                Hi everyone, my name is Rizky Rama Dhanu. I am a Junior Front End Developer, Computer and Network Engineering Student, Coding is my passion and hobby since I was 15 years old, and I have loved computers since I was a kid.
+              </p>
+              <p class="mb-6 font-medium">I live in Mertan, Bendosari, Sukoharjo, Indonesia. I was born in Sukoharjo, October 31 2005. I am 17 years old. I am a Computer and Network Engineering student from SMK Veteran 1 Sukoharjo.</p>
+              <h1 class="mb-3 text-4xl font-bold">Education</h1>
+              <ol class="relative ml-2 border-l-4 border-sky">
+                <li class="mb-10 ml-4">
+                  <div class="absolute -left-3 flex h-5 w-5 items-center justify-center rounded-full bg-sky">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="h-4 w-4 text-white2" fill="currentColor">
+                      <path
+                        d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="mb-2 text-lg font-bold">Vocational High School</h2>
+                  <p class="font-medium">SMK Veteran 1</p>
+                  <p class="mb-2 font-medium">Computer and Network Engineering</p>
+                  <p class="text-sm font-medium">2021 - Now</p>
+                </li>
+              </ol>
+              <h1 class="mb-3 text-4xl font-bold">Work Experience</h1>
+              <ol class="relative ml-2 border-l-4 border-sky">
+                <li class="mb-10 ml-4">
+                  <div class="absolute -left-3 flex h-5 w-5 items-center justify-center rounded-full bg-sky">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-3 w-3 text-white2" fill="currentColor">
+                      <path
+                        d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
+                      />
+                    </svg>
+                  </div>
+                  <h2 class="mb-2 text-lg font-bold">Internship</h2>
+                  <p class="font-medium">PT. Jujura</p>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Learn laravel</li>
+                  </ul>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Learn mysql databases</li>
+                  </ul>
+                  <ul class="ml-4 list-disc">
+                    <li class="font-medium">Helping the IT team create employee data web views</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Create a consultancy website using laravel and mysql</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Overcoming dead laptops</li>
+                  </ul>
+                  <ul class="mb-2 ml-4 list-disc">
+                    <li class="font-medium">Overcome wifi networks that are not connected</li>
+                  </ul>
+                  <p class="text-sm font-medium">Jan 2023 - Mar 2023</p>
+                </li>
+              </ol>
+              <h1 class="mb-3 text-4xl font-bold">Resume</h1>
+              <p class="font-medium">You can read my resume <a class="text-sky underline" target="_blank" href="https://drive.google.com/file/d/1jvOJBsnzKCzCxo1jeLF_YjJqsDbC8btr/view?usp=share_link">here.</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Back To Top -->
+    <a
+      href="#"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20"
+      id="to-top"
+    >
+      <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"></path>
+      </svg>
+    </a>
+    <!-- Back to top End -->
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
+    <!-- Footer End -->
+
+    <script src="js/script.js
+    "></script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" href="../public/favicon.ico" type="image/x-icon" />
+    <title>Projects - Rizky</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- TailwindCSS -->
+    <link href="css/minify/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-rubik">
+    <!-- Animation Preloaders -->
+    <div class="fixed z-10 flex h-screen w-full items-center justify-center bg-white2 dark:bg-dark" id="loader">
+      <span class="circle animate-loader"></span>
+      <span class="circle animation-delay-200 animate-loader"></span>
+      <span class="circle animation-delay-400 animate-loader"></span>
+    </div>
+    <!-- Animation Preloaders End -->
+
+    <!-- Header -->
+    <header class="fixed left-0 top-0 z-20 flex w-full items-center border-b bg-white dark:border-dark3 dark:bg-dark2">
+      <div class="container">
+        <div class="relative flex items-center justify-between px-6 py-4 md:px-10 md:py-0">
+          <!-- left -->
+          <div class="flex items-center">
+            <button id="hamburger" name="hamburger" type="button" class="left-4 block md:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left duration-300 ease-in-out"></span>
+            </button>
+            <!-- Navbar -->
+            <nav id="nav-menu" class="absolute left-0 top-full hidden h-screen w-full border-t bg-white py-4 dark:border-dark3 dark:bg-dark md:static md:block md:h-fit md:bg-transparent md:dark:bg-transparent">
+              <ul class="block md:flex">
+                <li class="group">
+                  <a
+                    href="home.html"
+                    class="mx-4 flex border-b pb-2 pt-2 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="about.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="skills.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="projects.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="contact.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Right -->
+          <!-- Dark Mode -->
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <svg class="mr-1 h-4 w-4 text-dark text-opacity-50 dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                />
+              </svg>
+              <input type="checkbox" class="hidden" id="dark-toggle" />
+              <label for="dark-toggle">
+                <div class="flex h-6 w-12 cursor-pointer items-center rounded-full bg-slate-300 p-1 dark:bg-dark4">
+                  <div class="toggle-circle h-5 w-5 rounded-full bg-white transition-all duration-200 ease-in-out hover:scale-75"></div>
+                </div>
+              </label>
+              <svg class="ml-1 h-4 w-4 text-sky dark:text-white dark:text-opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Projects -->
+    <section class="bg-white2 pb-16 pt-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-col items-center justify-center gap-3">
+          <h1 class="text-4xl font-bold text-dark dark:text-white3">Projects</h1>
+        </div>
+        <div class="flex flex-wrap justify-center p-5">
+          <!-- Rizky Football -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/rizky-football.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Rizky Football</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Soccer club search website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/css.svg" alt="CSS" title="CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/rizky-football" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4 title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://rizky-football.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Bookshelf App -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/bookshelf-app.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Bookshelf App</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Book management website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/css.svg" alt="CSS" title="CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/Bookshelf-App" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://bookshelf-app-danualexis.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- My Old Portfolio -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/portfolio-old.JPG" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Portfolio Old</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">My old portfolio website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-9" src="../public/icons/bootstrap.svg" alt="Bootstrap" title="Bootstrap" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/Portfolio-Old" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://portfolio-old-danualexis.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Gbrn Variasi -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/gbrn-variasi.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Gbrn Variasi</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Car Emblems and Stickers website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="w-9" src="../public/icons/bootstrap.svg" alt="Bootstrap" title="Bootstrap" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/Gbrn_Variasi" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://gbrn-variasi.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Todolist App -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/todolist-app.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Todolist App</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Todolist App website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/css.svg" alt="CSS" title="CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/TodoList-App" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://todolist-app-danualexis.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Game Suwit -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/game-suwit.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Game Suwit</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Javanese suwit Game website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/css.svg" alt="CSS" title="CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/Game-Suwit" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://game-suwit-danualexis.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Haloriz -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/haloriz.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Haloriz</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Consultancy website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-9" src="../public/icons/bootstrap.svg" alt="Bootstrap" title="Bootstrap" />
+                <img class="mr-3 w-8" src="../public/icons/laravel.svg" alt="Laravel" title="Laravel" />
+                <img class="w-12" src="../public/icons/mysql.svg" alt="Mysql" title="Mysql" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/haloriz" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="http://haloriz.000webhostapp.com/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Front-End Roadmap -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/frontend-roadmap.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Front End Roadmap</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Roadmap to become a Front End Developer</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/front-end-roadmap" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://roadmap-fe-rzkyrmdnu.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio v2 -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/portfolio-v2.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Portfolio Website v2</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Second revision of my portfolio website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/rzkyrmdnu-portfolio" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://www.rzkyrmdnu.my.id" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio v3 -->
+          <div class="mx-3 my-5 flex w-full flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-5/12">
+            <img class="rounded-lg shadow" src="../public/images/portfolio-v3.jpg" alt="" />
+            <h5 class="text-2xl font-bold text-dark dark:text-white3">Portfolio Website v3</h5>
+            <p class="mb-3 font-medium text-dark dark:text-white3">Third revision of my portfolio website</p>
+            <div class="flex justify-between">
+              <div class="flex">
+                <img class="mr-3 w-8" src="../public/icons/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+                <img class="w-8 rounded" src="../public/icons/js.svg" alt="javaScript" title="javaScript" />
+              </div>
+              <div class="flex items-center">
+                <a href="https://github.com/rzkyrmdnu/website-portfolio-v3" target="_blank" class="rounded p-1 hover:bg-white3 hover:dark:bg-dark4" title="Repository">
+                  <svg class="w-6 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" fill="currentColor">
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                    />
+                  </svg>
+                </a>
+                <a href="https://rzkyrmdnu-portfolio-v3.vercel.app/" target="_blank" class="rounded p-2 hover:bg-white3 hover:dark:bg-dark4" title="Demo">
+                  <svg class="w-4 text-dark dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                    <path
+                      d="M288 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h50.7L169.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L384 141.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H288zM80 64C35.8 64 0 99.8 0 144V400c0 44.2 35.8 80 80 80H336c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h80c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects End -->
+
+    <!-- Back To Top -->
+    <a
+      href="#"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-700 dark:bg-opacity-10 dark:hover:bg-opacity-20 text-sky dark:bg-blue-700 dark:bg-opacity-10 dark:hover:bg-opacity-20 transition-all duration-200 ease-in-out hover:bg-blue-100"
+      id="to-top"
+    >
+    <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"></path></svg>
+    </a>
+    <!-- Back to top End -->
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center text-sm font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
+    <!-- Footer End -->
+
+    <script src="js/script.js
+    "></script>
+  </body>
+</html>

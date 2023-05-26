@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hamburger */
+.hamburger-line {
+  @apply my-1 block h-[2px] w-[20px] bg-dark dark:bg-white3;
+}
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-[40deg];
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-[40deg];
+}
+
+/* Dark Toggle */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-5;
+}
+
+@layer utilities {
+  /* Animation Preloaders */
+  .circle {
+    @apply mx-1 my-12 h-4 w-4 rounded-full bg-sky;
+  }
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  /* Waving Hand */
+  .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="website icon" href="../public/favicon.ico" type="image/x-icon" />
+    <title>Skills - Rizky</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- TailwindCSS -->
+    <link href="css/minify/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-rubik">
+    <!-- Animation Preloaders -->
+    <div class="fixed z-10 flex h-screen w-full items-center justify-center bg-white2 dark:bg-dark" id="loader">
+      <span class="circle animate-loader"></span>
+      <span class="circle animation-delay-200 animate-loader"></span>
+      <span class="circle animation-delay-400 animate-loader"></span>
+    </div>
+    <!-- Animation Preloaders End -->
+
+    <!-- Header -->
+    <header class="fixed left-0 top-0 z-20 flex w-full items-center border-b bg-white dark:border-dark3 dark:bg-dark2">
+      <div class="container">
+        <div class="relative flex items-center justify-between px-6 py-4 md:px-10 md:py-0">
+          <!-- left -->
+          <div class="flex items-center">
+            <button id="hamburger" name="hamburger" type="button" class="left-4 block md:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left duration-300 ease-in-out"></span>
+            </button>
+            <!-- Navbar -->
+            <nav id="nav-menu" class="absolute left-0 top-full hidden h-screen w-full border-t bg-white py-4 dark:border-dark3 dark:bg-dark md:static md:block md:h-fit md:bg-transparent md:dark:bg-transparent">
+              <ul class="block md:flex">
+                <li class="group">
+                  <a
+                    href="home.html"
+                    class="mx-4 flex border-b pb-2 pt-2 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="about.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="skills.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Skills</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="projects.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="contact.html"
+                    class="mx-4 flex border-b pb-2 pt-6 text-base font-bold text-dark transition duration-200 ease-in-out hover:border-sky group-hover:text-sky dark:border-dark3 dark:text-white3 dark:hover:border-sky md:border-none md:pb-0 md:pt-2"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Right -->
+          <!-- Dark Mode -->
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <svg class="mr-1 h-4 w-4 text-dark text-opacity-50 dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05L3.515 4.93zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414l-2.121-2.121zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414l2.121-2.121zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414l2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                />
+              </svg>
+              <input type="checkbox" class="hidden" id="dark-toggle" />
+              <label for="dark-toggle">
+                <div class="flex h-6 w-12 cursor-pointer items-center rounded-full bg-slate-300 p-1 dark:bg-dark4">
+                  <div class="toggle-circle h-5 w-5 rounded-full bg-white transition-all duration-200 ease-in-out hover:scale-75"></div>
+                </div>
+              </label>
+              <svg class="ml-1 h-4 w-4 text-sky dark:text-white dark:text-opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Skills -->
+    <section class="bg-white2 pb-16 pt-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-col items-center justify-center gap-3">
+          <h1 class="text-4xl font-bold text-dark dark:text-white3">Skills</h1>
+        </div>
+        <div class="flex flex-wrap justify-center p-5">
+          <!-- Html -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 ease-in-out hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="HTML"
+          >
+            <img class="w-24" src="../public/icons/html.svg" alt="HTML" />
+          </div>
+          <!-- Css -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="CSS"
+          >
+            <img class="w-24" src="../public/icons/css.svg" alt="CSS" />
+          </div>
+          <!-- Bootstrap -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="Bootstrap"
+          >
+            <img class="w-28" src="../public/icons/bootstrap.svg" alt="Bootstrap" />
+          </div>
+          <!-- C++ -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="C++"
+          >
+            <img class="w-24" src="../public/icons/cpp.svg" alt="C++" />
+          </div>
+          <!-- JavaScript -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="JavaScript"
+          >
+            <img class="w-24 rounded-xl" src="../public/icons/js.svg" alt="javaScript" />
+          </div>
+          <!-- Tailwind CSS -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="Tailwind CSS"
+          >
+            <img class="w-24" src="../public/icons/tailwind.svg" alt="Tailwind CSS" />
+          </div>
+          <!-- Laravel -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="Laravel"
+          >
+            <img class="w-24" src="../public/icons/laravel.svg" alt="Laravel" />
+          </div>
+          <!-- Mysql -->
+          <div
+            class="mx-3 my-5 flex w-1/3 flex-col items-center justify-center gap-3 rounded-xl bg-white p-5 shadow-md transition-all duration-200 hover:-translate-y-3 hover:bg-white4 dark:bg-dark2 hover:dark:bg-dark5 md:w-1/5"
+            title="Mysql"
+          >
+            <img class="w-28" src="../public/icons/mysql.svg" alt="Mysql" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills End -->
+
+    <!-- Back To Top -->
+    <a
+      href="#"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20 md:hidden"
+      id="to-top"
+    >
+      <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"></path>
+      </svg>
+    </a>
+    <!-- Back to top End -->
+
+    <!-- Footer -->
+    <footer class="fixed bottom-0 z-20 w-full border-t bg-white py-4 text-center text-sm font-medium text-dark dark:border-dark3 dark:bg-dark2 dark:text-white3">Copyright 2023 - Made With ❤️ rzkyrmdnu</footer>
+    <!-- Footer End -->
+
+    <script src="js/script.js
+    "></script>
+  </body>
+</html>
