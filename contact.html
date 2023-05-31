@@ -19,7 +19,7 @@
       })();
     </script>
   </head>
-  <body class="font-rubik">
+  <body class="bg-white2 font-rubik dark:bg-dark">
     <!-- Animation Preloaders -->
     <div class="fixed z-10 flex h-screen w-full items-center justify-center bg-white2 dark:bg-dark" id="loader">
       <span class="circle animate-loader"></span>
@@ -106,43 +106,42 @@
     </header>
     <!-- Header End -->
 
+    <!-- Alert Notification -->
+    <div class="my-alert fixed flex hidden h-screen w-full items-center justify-center">
+      <div class="relative flex w-40 flex-col items-center justify-center rounded-lg bg-white px-4 py-4 text-center shadow-md dark:bg-dark5" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="w-12 text-green-600">
+          <path
+            fill="currentColor"
+            d="M512 64a448 448 0 1 1 0 896a448 448 0 0 1 0-896zm-55.808 536.384l-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"
+          />
+        </svg>
+        <span class="font-medium text-dark dark:text-white2">Message sent successfully</span>
+      </div>
+    </div>
+
     <!-- Contact -->
-    <section class="bg-white2 pb-16 pt-28 dark:bg-dark">
-      <div class="container">
+    <section class="h-screen">
+      <div class="container pb-16 pt-28">
         <div class="w-full px-6">
           <div class="mx-auto max-w-lg p-5">
             <h1 class="mb-6 text-center text-4xl font-bold text-dark dark:text-white3">Contact</h1>
             <div class="text-dark dark:text-white3">
               <p class="mb-3 font-medium">Please don’t hesitate to get in touch with me by following my social media below</p>
-              <ul class="ml-10 list-disc">
+              <ul class="ml-8 list-disc">
                 <li class="font-medium">Instagram - <a href="https://www.instagram.com/danualexis58_" target="_blank" class="font-bold underline">danualexis58</a></li>
               </ul>
-              <ul class="ml-10 list-disc">
+              <ul class="ml-8 list-disc">
                 <li class="font-medium">Fecebook - <a href="https://www.facebook.com/danualexis58" class="font-bold underline">Danu Alexis</a></li>
               </ul>
-              <ul class="ml-10 list-disc">
+              <ul class="ml-8 list-disc">
                 <li class="font-medium">Github - <a href="https://github.com/rzkyrmdnu" target="_blank" class="font-bold underline">rzkyrmdnu</a></li>
               </ul>
-              <ul class="mb-6 ml-10 list-disc">
+              <ul class="mb-6 ml-8 list-disc">
                 <li class="font-medium">LinkedIn - <a href="https://www.linkedin.com/in/rzkyrmdnu" target="_blank" class="font-bold underline">Rizky Rama Dhanu</a></li>
               </ul>
               <h1 class="mb-6 text-center text-4xl font-bold text-dark dark:text-white3">Message</h1>
             </div>
-            <!-- Alert Notification -->
-            <div class="my-alert relative mb-6 hidden rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700" role="alert">
-              <strong class="font-bold">Thank You!</strong>
-              <span class="block font-medium md:inline">We have received your message.</span>
-              <button class="alert-del absolute bottom-0 right-0 top-0 px-2 py-3">
-                <span>
-                  <svg class="h-6 w-6 fill-current text-green-600 hover:text-opacity-80" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <title>Close</title>
-                    <path
-                      d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
+
             <!-- Contact Form -->
             <form id="contact-form">
               <!-- Name -->

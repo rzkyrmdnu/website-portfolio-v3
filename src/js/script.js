@@ -62,7 +62,6 @@ onload = function () {
 const btnLoading = document.querySelector('.btn-loading');
 const btnKirim = document.querySelector('.btn-kirim');
 const myAlert = document.querySelector('.my-alert');
-const alertDel = document.querySelectorAll('.alert-del');
 const serviceID = 'service_oscztgm';
 const templateID = 'template_fwcbu37';
 
@@ -81,6 +80,10 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
       btnKirim.classList.toggle('hidden');
       // Show Alert
       myAlert.classList.toggle('hidden');
+      // Remove Alert
+      setTimeout(() => {
+        myAlert.style.display = 'none';
+      }, 3000);
       console.log('SUCCESS!', response.status, response.text);
       // Reset form
       document.getElementById('contact-form').reset();
@@ -90,10 +93,3 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     }
   );
 });
-
-// when cross button is clicked remove alert
-alertDel.forEach((x) =>
-  x.addEventListener('click', function () {
-    x.parentElement.classList.add('hidden');
-  })
-);
