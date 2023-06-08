@@ -59,8 +59,7 @@ onload = function () {
 
 // Contact Form
 // Emailjs
-const btnLoading = document.querySelector('.btn-loading');
-const btnKirim = document.querySelector('.btn-kirim');
+const alertLoading = document.querySelector('.alert-loading');
 const myAlert = document.querySelector('.my-alert');
 const serviceID = 'service_oscztgm';
 const templateID = 'template_fwcbu37';
@@ -69,15 +68,13 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
   event.preventDefault();
   // When the Submit Button is Clicked
   // Show Loading Button, Remove Send Button
-  btnLoading.classList.toggle('hidden');
-  btnKirim.classList.toggle('hidden');
+  alertLoading.classList.toggle('hidden');
 
   // send the email here
   emailjs.sendForm(serviceID, templateID, this).then(
     (response) => {
       // Show Submit Button, Remove loading Button
-      btnLoading.classList.toggle('hidden');
-      btnKirim.classList.toggle('hidden');
+      alertLoading.classList.toggle('hidden');
       // Show Alert
       myAlert.classList.toggle('hidden');
       // Remove Alert

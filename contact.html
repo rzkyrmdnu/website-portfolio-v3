@@ -93,7 +93,7 @@
               <input type="checkbox" class="hidden" id="dark-toggle" />
               <label for="dark-toggle">
                 <div class="flex h-6 w-12 cursor-pointer items-center rounded-full bg-slate-300 p-1 dark:bg-dark4">
-                  <div class="toggle-circle h-5 w-5 rounded-full bg-white transition-all duration-200 ease-in-out hover:scale-75"></div>
+                  <div class="toggle-circle h-5 w-5 rounded-full bg-white2 transition-all duration-200 ease-in-out"></div>
                 </div>
               </label>
               <svg class="ml-1 h-4 w-4 text-sky dark:text-white dark:text-opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -118,6 +118,16 @@
         <span class="font-medium text-dark dark:text-white2">Message sent successfully</span>
       </div>
     </div>
+    <!-- Alert Loading -->
+    <div class="alert-loading fixed flex hidden h-screen w-full items-center justify-center">
+      <div class="relative flex w-40 flex-col items-center justify-center rounded-lg bg-white px-4 py-4 text-center shadow-md dark:bg-dark5" role="alert">
+        <svg class="mb-2 w-10 animate-spin text-sky" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span class="font-medium text-dark dark:text-white2">Loading...</span>
+      </div>
+    </div>
 
     <!-- Contact -->
     <section class="h-screen">
@@ -128,16 +138,16 @@
             <div class="text-dark dark:text-white3">
               <p class="mb-3 font-medium">Please don’t hesitate to get in touch with me by following my social media below</p>
               <ul class="ml-8 list-disc">
-                <li class="font-medium">Instagram - <a href="https://www.instagram.com/danualexis58_" target="_blank" class="font-bold underline">danualexis58</a></li>
+                <li class="font-medium">Instagram - <a href="https://www.instagram.com/danualexis58_" target="_blank" class="font-bold underline decoration-dashed underline-offset-4">danualexis58</a></li>
               </ul>
               <ul class="ml-8 list-disc">
-                <li class="font-medium">Fecebook - <a href="https://www.facebook.com/danualexis58" class="font-bold underline">Danu Alexis</a></li>
+                <li class="font-medium">Fecebook - <a href="https://www.facebook.com/danualexis58" class="font-bold underline decoration-dashed underline-offset-4">Danu Alexis</a></li>
               </ul>
               <ul class="ml-8 list-disc">
-                <li class="font-medium">Github - <a href="https://github.com/rzkyrmdnu" target="_blank" class="font-bold underline">rzkyrmdnu</a></li>
+                <li class="font-medium">Github - <a href="https://github.com/rzkyrmdnu" target="_blank" class="font-bold underline decoration-dashed underline-offset-4">rzkyrmdnu</a></li>
               </ul>
               <ul class="mb-6 ml-8 list-disc">
-                <li class="font-medium">LinkedIn - <a href="https://www.linkedin.com/in/rzkyrmdnu" target="_blank" class="font-bold underline">Rizky Rama Dhanu</a></li>
+                <li class="font-medium">LinkedIn - <a href="https://www.linkedin.com/in/rzkyrmdnu" target="_blank" class="font-bold underline decoration-dashed underline-offset-4">Rizky Rama Dhanu</a></li>
               </ul>
               <h1 class="mb-6 text-center text-4xl font-bold text-dark dark:text-white3">Message</h1>
             </div>
@@ -147,7 +157,14 @@
               <!-- Name -->
               <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Full Name</span>
               <label for="name">
-                <input type="text" id="name" name="name" placeholder="Your Name" class="mb-6 block w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 focus:border-sky focus:outline-none" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  class="mb-6 block w-full rounded border-2 bg-white p-3 text-sm font-medium text-dark placeholder:text-slate-400 focus:border-sky focus:outline-none dark:border-dark3 dark:bg-dark2 dark:text-white3 dark:placeholder:text-slate-600 dark:focus:border-sky"
+                  required
+                />
               </label>
               <!-- Email -->
               <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Email</span>
@@ -157,9 +174,9 @@
                   id="email"
                   name="email"
                   placeholder="Your Email"
-                  class="peer block w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 invalid:text-pink-700 focus:border-sky focus:outline-none invalid:focus:border-pink-700"
+                  class="peer block w-full rounded border-2 bg-white p-3 text-sm font-medium text-dark placeholder:text-slate-400 invalid:text-pink-600 focus:border-sky focus:outline-none invalid:focus:border-pink-600 dark:border-dark3 dark:bg-dark2 dark:text-white3 dark:placeholder:text-slate-600 dark:invalid:text-pink-600 dark:focus:border-sky dark:invalid:focus:border-pink-600"
                 />
-                <p class="invisible m-1 text-sm text-pink-700 peer-invalid:visible">Invalid email</p>
+                <p class="invisible m-1 text-sm text-pink-600 peer-invalid:visible">Invalid email</p>
               </label>
               <!-- Message -->
               <span class="mb-1 block font-semibold text-dark after:ml-0.5 after:text-pink-500 after:content-['*'] dark:text-white3">Message</span>
@@ -167,25 +184,17 @@
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Your Message"
-                  class="mb-6 block h-32 w-full rounded border bg-slate-200 p-3 text-sm font-medium shadow placeholder:text-slate-400 focus:border-sky focus:outline-none"
+                  placeholder="Write your message"
+                  class="mb-6 block h-32 w-full rounded border-2 bg-white p-3 text-sm font-medium text-dark placeholder:text-slate-400 focus:border-sky focus:outline-none dark:border-dark3 dark:bg-dark2 dark:text-white3 dark:placeholder:text-slate-600 dark:focus:border-sky"
                   required
                 ></textarea>
               </label>
               <!-- Button send -->
               <div class="flex w-full">
-                <button type="submit" class="btn-kirim flex items-center rounded bg-sky px-4 py-2 font-semibold text-white transition duration-200 hover:bg-opacity-80">
-                  <svg class="mr-2 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 2L11 13M22 2l-7 20l-4-9l-9-4l20-7z" /></svg
-                  >Send
-                </button>
-                <!-- Button Loading -->
-                <button type="button" class="btn-loading flex hidden items-center rounded bg-sky bg-opacity-80 px-4 py-2 text-white" disabled>
-                  <svg class="mr-3 h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <button type="submit" class="flex items-center rounded bg-sky px-4 py-2 font-semibold text-white transition duration-200 ease-in-out hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500">
+                  Send<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-2 w-4">
+                    <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"></path>
                   </svg>
-                  <span class="font-semibold"> Loading... </span>
                 </button>
               </div>
             </form>
@@ -198,7 +207,7 @@
     <!-- Back To Top -->
     <a
       href="#"
-      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-blue-700 dark:bg-blue-700 dark:bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 dark:hover:bg-opacity-20"
+      class="fixed bottom-20 right-10 hidden h-10 w-10 cursor-pointer items-center justify-center rounded-xl bg-blue-50 text-sky transition-all duration-200 ease-in-out hover:bg-blue-100 dark:bg-slate-900 hover:dark:bg-slate-800"
       id="to-top"
     >
       <svg class="w-6" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
